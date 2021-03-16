@@ -6,14 +6,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-  <meta name="description" content="This is quick starter version 2 which is always upgrading.."> 
+  <meta name="description" content="Create a drum kit with javascript DOM"> 
 
   <!-- icons -->
   <link rel="apple-touch-icon" href="images/favicon.ico">
   <link rel="icon" href="images/icon.png">
 
   <!-- Google Fonts -->
-  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 
   <!-- Font awesome -->
@@ -30,7 +31,7 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
 
-  <title>QSv2: Quick starter version 2</title>
+  <title>Drum with DOM by babulakterfsd</title>
 </head>
 
 <body class="nocopy">
@@ -38,7 +39,38 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  
+<section class="header text-white" id="header">
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+      <div class="col-md-4 d-flex justify-content-center header-container">
+        <h1 class="align-self-center">DJ Snake</h1>
+      </div>
+      <div class="col-md-8">
+        <div class="keys">
+          <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+          </div>
+          <div data-key="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">hihat</span>
+          </div>
+          <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+          </div>
+          <div data-key="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">openhat</span>
+          </div>
+      </div>
+      <audio data-key="65" src="./audio/boom.wav"></audio>
+      <audio data-key="83" src="./audio/clap.wav"></audio>
+      <audio data-key="68" src="./audio/hihat.wav"></audio>
+      <audio data-key="70" src="./audio/kick.wav"></audio>
+    </div>
+  </div>
+</section>
 
 
 
@@ -46,7 +78,7 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap-next.min.js"></script>
-  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="js/modernizr-3.6.0.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
   <!-- Google Analytics: I should change UA-XXXXX-Y to be my site's ID. 

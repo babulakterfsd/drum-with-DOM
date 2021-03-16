@@ -118,8 +118,50 @@ textarea {
 
    /* --------- body style -------- */
 
-
-
+#header {
+    background: #000;
+    background-image: url(../images/snake.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Lobster', cursive;
+}
+.keys {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .key {
+    border: .4rem solid black;
+    border-radius: .5rem;
+    font-size: 1rem;
+    transition: all .07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(14, 90, 71, 0.4);
+    text-shadow: 0 0 .5rem black;
+  }
+  .playing {
+    transform: scale(.9);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ec0909;
+  }
+  
+  kbd {
+    display: block;
+    font-size: 3rem;
+  }
+  
+  .sound {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #ffc600;
+  }
 
 
 

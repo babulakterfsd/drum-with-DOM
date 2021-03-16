@@ -1,19 +1,21 @@
-// code for preloader starts here
-document.getElementsByTagName('main')[0].style.display = 'none';
- document.querySelector('.loader').style.display = 'none';
- 
- window.addEventListener('load', function () {
-    
-     document.querySelector('.loader').style.display = 'block';
- 
-     setTimeout(function () {
-         document.getElementsByTagName('main')[0].style.display = 'block';
-         document.querySelector('.loader').style.display = 'none';
- 
-     }, 2550);
- 
- })
+'use strict';
 
 
- // code for body starts from here 
+function removeTransition(e) {
+    if (e.propertyName !== 'transform') return;
+    e.target.classList.remove('playing');
+  }
 
+  function playSound(e) {
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+    if (!audio) return;
+
+    key.classList.add('playing');
+    audio.currentTime = 0;
+    audio.play();
+  }
+
+  const keys = Array.from(document.querySelectorAll('.key'));
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+  window.addEventListener('keydown', playSound); 
